@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+/* 
+inizializziamo una serie di variabili che ci serviranno per caratterizzare gli elementi del sito, attraverso un particolare selettore che verrà "letto" dal browser per primo, quando questo accederà al file css
+*/
+:root {
+    --titolo-principale: #7b6cd5;
+    --corpo-testo: #555555;
+    --colore-sfondo-scuro: #ffffff;
+}
+
+/* 
+selettore universale 
+*/
+* {
+    margin:0;
+}
+
+
+/* 
+indichiamo al folgio di stile quali elementi dovranno avere i font scelti
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
+    /* 
+    applico a tutti i tag heading il colore definito nel selettore root, attraverso il nome della "variabile"
+    */
+    color: var(--titolo-principale);
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    color: var(--corpo-testo);
+}
+
+.container {
+    /* 
+    un elemento si posizionerà sempre al centro del suo contenitore genitore grazie all'unione delle proprietà width e margin: 0 auto;
+    l'impostazione di margin:0 auto; genera la centratura solo se la proprietà width avrà un valore definito
+    */
+    width: 70%;
+    /* height: 400px;
+    background-color: blue; */
+
+    margin:0 auto;
+}
+
+
+/* 
+================= Testata ===========================
+*/
+.img-testata {
+    background-image: url(../immagini/pexels-prasanthinturi-1051838.jpg);
+    height: 50vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.area-logo {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 2px solid var(--colore-sfondo-scuro);
+}
+
+.area-logo div {
+    color: var(--colore-sfondo-scuro);
+}
+
+
+
+/* 
+================= END Testata ===========================
+*/

@@ -8,6 +8,7 @@ inizializziamo una serie di variabili che ci serviranno per caratterizzare gli e
     --titolo-principale: #7b6cd5;
     --corpo-testo: #555555;
     --colore-sfondo-scuro: #ffffff;
+    --sfondo-bottone: #fe86d4;
 }
 
 /* 
@@ -29,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--titolo-principale);
 }
 
-p {
+p, button {
     font-family: "Open Sans", sans-serif;
     color: var(--corpo-testo);
 }
@@ -49,6 +50,23 @@ figcaption {
     margin:0 auto;
 }
 
+/* =============== Micro classi (LIBERIA) ======================= */
+.box-flessibile {
+    display: flex;
+}
+.centra-elemento {
+    justify-content: center;
+}
+.allinea-destra {
+    justify-content: end;
+}
+.allinea-centro-verticale {
+    align-items: center;
+}
+.flex-colonne {
+    flex-direction: column;
+}
+/* =============== END Micro classi (LIBERIA) ======================= */
 
 /* 
 ================= Testata ===========================
@@ -75,6 +93,8 @@ figcaption {
     .col-testata {
         width: 30%;
     }
+
+
     .area-logo a {
         color: var(--colore-sfondo-scuro);
         /* 
@@ -83,18 +103,37 @@ figcaption {
         text-decoration: none;
     }
 
-.box-flessibile {
-    display: flex;
+.area-titoli-testata {
+    padding: 100px 0;
 }
-.centra-elemento {
-    justify-content: center;
-}
-.allinea-destra {
-    justify-content: end;
-}
-.allinea-centro-verticale {
-    align-items: center;
-}
+    .area-titoli-testata h1, .area-titoli-testata p {
+        color: var(--colore-sfondo-scuro);
+        margin: 0 0 20px 0;
+    }
+    .area-titoli-testata button {
+        background-color: var(--sfondo-bottone);
+        padding: 15px 30px;
+        border: none;
+        font-size: 20px;
+        color: var(--colore-sfondo-scuro);
+        border-radius: 5px;
+    }
+    /* 
+    le pseudoclassi, ci permettono di modificare una o più proprietà al verificarsi di un evento scatenato dall'utente
+    Per es.: 
+    quando l'utente si posizione con il mouse su un elemento, possiamo modificare una o più proprietà dell'elleemnto su cui si trova il mouse
+
+    */
+    .area-titoli-testata button:hover {
+        color: var(--titolo-principale);
+        /* font-size: 50px;
+        background-color: yellow;
+        border: 10px dotted blue; */
+    }
+
+
+
+
 
 
 

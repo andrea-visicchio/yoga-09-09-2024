@@ -33,6 +33,9 @@ p {
     font-family: "Open Sans", sans-serif;
     color: var(--corpo-testo);
 }
+figcaption {
+    display: none;
+}
 
 .container {
     /* 
@@ -61,11 +64,36 @@ p {
     display: flex;
     justify-content: space-between;
 
-    border-bottom: 2px solid var(--colore-sfondo-scuro);
+    border-bottom: 1px solid var(--colore-sfondo-scuro);
+    padding: 20px 10px;
 }
 
 .area-logo div {
     color: var(--colore-sfondo-scuro);
+    /* background-color: red; */
+}
+    .col-testata {
+        width: 30%;
+    }
+    .area-logo a {
+        color: var(--colore-sfondo-scuro);
+        /* 
+        per togliere la sottolineatura da una scritta
+        */
+        text-decoration: none;
+    }
+
+.box-flessibile {
+    display: flex;
+}
+.centra-elemento {
+    justify-content: center;
+}
+.allinea-destra {
+    justify-content: end;
+}
+.allinea-centro-verticale {
+    align-items: center;
 }
 
 
